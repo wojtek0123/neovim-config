@@ -19,7 +19,6 @@ return {
 
   -- disable trouble
   -- { "folke/trouble.nvim", enabled = false },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   -- add symbols-outline
   {
     "simrat39/symbols-outline.nvim",
