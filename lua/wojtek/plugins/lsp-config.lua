@@ -45,7 +45,7 @@ return {
 				keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
 
 				opts.desc = "Smart rename"
-				keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
+				keymap.set("n", "<leader>cr", vim.lsp.buf.rename, opts) -- smart rename
 
 				opts.desc = "Show buffer diagnostics"
 				keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
@@ -87,10 +87,10 @@ return {
 			end,
 			["angularls"] = function()
 				lspconfig["angularls"].setup({
-					capabilities = capabilities,
 					cmd = { "node", "/usr/lib/node_modules/@angular/language-server/index.js", "--stdio" },
 					filetypes = { "typescript", "html", "typescriptreact", "typescript.tsx" },
 					root_dir = require("lspconfig.util").root_pattern("angular.json", "tsconfig.json"),
+					capabilities = capabilities,
 				})
 			end,
 			["svelte"] = function()

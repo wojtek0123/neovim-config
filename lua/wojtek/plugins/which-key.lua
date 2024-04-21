@@ -6,8 +6,16 @@ return {
 		vim.o.timeoutlen = 500
 	end,
 	opts = {
-		-- your configuration comes here
-		-- or leave it empty to use the default settings
-		-- refer to the configuration section below
+		mode = { "n", "v" },
+		["<leader>b"] = { name = "+buffer" },
+		["<leader>c"] = { name = "+code" },
+		["<leader>g"] = { name = "+git" },
+		["<leader>w"] = { name = "+windows" },
+		["<leader>x"] = { name = "+trouble" },
+		["<leader><tab>"] = { name = "+tabs" },
+		["]"] = { name = "+next" },
+		["["] = { name = "+prev" },
+		["z"] = { name = "+fold" },
+		["g"] = { name = "+goto" },
 	},
 }
