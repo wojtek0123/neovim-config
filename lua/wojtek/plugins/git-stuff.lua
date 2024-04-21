@@ -19,7 +19,7 @@ return {
 
 			vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
 			vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", {})
-			vim.keymap.set({ "o", "x" }, "gs", ":<C-U>Gitsigns select_hunk<CR>", "GitSigns Select Hunk")
+			vim.keymap.set({ "o", "x" }, "gs", ":<C-U>Gitsigns select_hunk<CR>", { desc = "GitSigns Select Hunk" })
 		end,
 	},
 }
