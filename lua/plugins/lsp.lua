@@ -16,6 +16,7 @@ return {
         nxls = {},
         lua_ls = {},
         tailwindcss = {},
+        prismals = {},
       },
     },
   },
