@@ -20,3 +20,5 @@ vim.o.smartcase = true
 vim.opt.termguicolors = true
 
 vim.opt.signcolumn = "yes"
+
+-- local float = { focusable = true, style = "minimal", border = "rounded" }

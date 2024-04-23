@@ -21,13 +21,4 @@ vim.keymap.set("n", "<leader>ht", require("telescope.builtin").help_tags, { desc
 vim.keymap.set("n", "zR", require("ufo").openAllFolds)
 vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
 
-vim.keymap.set("n", "<leader>ts", function()
-  vim.g.codespell_active = not vim.g.codespell_active
-  if vim.g.codespell_active then
-    vim.notify("Enabled codespell", vim.log.levels.INFO)
-    vim.g.try_lint()
-  else
-    vim.notify("Disabled codespell", vim.log.levels.INFO)
-    vim.diagnostic.reset(nil, 0)
-  end
-end, { desc = "[T]oggle code[s]pell" })
+vim.keymap.set("i", "jk", "<ESC>", { desc = "jk to escape" })
