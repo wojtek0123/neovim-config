@@ -18,14 +18,14 @@ return {
   -- },
 
   -- disable trouble
-  -- { "folke/trouble.nvim", enabled = false },
+  { "folke/trouble.nvim", enabled = false },
   -- add symbols-outline
-  -- {
-  --   "simrat39/symbols-outline.nvim",
-  --   cmd = "SymbolsOutline",
-  --   keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
-  --   config = true,
-  -- },
+  {
+    "simrat39/symbols-outline.nvim",
+    cmd = "SymbolsOutline",
+    keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
+    config = true,
+  },
 
   -- add telescope-fzf-native
   {
@@ -71,16 +71,15 @@ return {
       ensure_installed = {
         "stylua",
         "nxls",
-        "tsserver",
-        "angularls",
-        "prettier_d",
-        "eslint_d",
-        "eslint-lsp",
-        "cssls",
-        "html",
-        "tailwindcss",
-        "lua_ls",
-        "prismals"
+        -- "angularls",
+        -- "prettier_d",
+        -- "eslint_d",
+        -- "eslint-lsp",
+        -- "cssls",
+        -- "html",
+        -- "tailwindcss",
+        -- "lua_ls",
+        -- "prismals"
       },
     },
   },
