@@ -20,5 +20,3 @@ vim.keymap.set("n", "<leader>ht", require("telescope.builtin").help_tags, { desc
 -- ufo
 vim.keymap.set("n", "zR", require("ufo").openAllFolds)
 vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
-
-vim.keymap.set("i", "jk", "<ESC>", { desc = "jk to escape" })
