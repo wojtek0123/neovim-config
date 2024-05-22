@@ -16,9 +16,8 @@ vim.opt.incsearch = true
 vim.o.incsearch = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
+vim.o.scrolloff = 9999
 
 vim.opt.termguicolors = true
 
 vim.opt.signcolumn = "yes"
-
--- local float = { focusable = true, style = "minimal", border = "rounded" }
