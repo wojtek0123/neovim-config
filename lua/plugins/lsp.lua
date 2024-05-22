@@ -3,6 +3,9 @@ return {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
+      document_highlight = {
+        enabled = false,
+      },
       ---@type lspconfig.options
       servers = {
         tsserver = {},
