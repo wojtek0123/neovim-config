@@ -59,7 +59,8 @@ return {
         "typescript",
         "vim",
         "yaml",
-        "prisma"
+        "prisma",
+        "svelte"
       },
     },
   },
