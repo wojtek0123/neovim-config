@@ -2,6 +2,23 @@ return {
   {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
+      event_handlers = {
+        {
+          event = "neo_tree_buffer_enter",
+          handler = function(arg)
+            vim.opt.relativenumber = true
+          end,
+        },
+        {
+          event = "file_opened",
+          handler = function(file_path)
+            -- auto close
+            -- vimc.cmd("Neotree close")
+            -- OR
+            require("neo-tree.command").execute({ action = "close" })
+          end,
+        },
+      },
       filesystem = {
         filtered_items = {
           hide_dotfiles = false,
