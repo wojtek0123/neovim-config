@@ -1,7 +1,7 @@
 local function foldTextFormatter(virtText, lnum, endLnum, width, truncate)
-  local hlgroup = "NonText"
+  local hlgroup = 'NonText'
   local newVirtText = {}
-  local suffix = "    " .. tostring(endLnum - lnum)
+  local suffix = '    ' .. tostring(endLnum - lnum)
   local sufWidth = vim.fn.strdisplaywidth(suffix)
   local targetWidth = width - sufWidth
   local curWidth = 0
@@ -16,7 +16,7 @@ local function foldTextFormatter(virtText, lnum, endLnum, width, truncate)
       table.insert(newVirtText, { chunkText, hlGroup })
       chunkWidth = vim.fn.strdisplaywidth(chunkText)
       if curWidth + chunkWidth < targetWidth then
-        suffix = suffix .. (" "):rep(targetWidth - curWidth - chunkWidth)
+        suffix = suffix .. (' '):rep(targetWidth - curWidth - chunkWidth)
       end
       break
     end
@@ -27,9 +27,9 @@ local function foldTextFormatter(virtText, lnum, endLnum, width, truncate)
 end
 
 return {
-  "kevinhwang91/nvim-ufo",
-  dependencies = "kevinhwang91/promise-async",
-  event = "VimEnter", -- needed for folds to load in time and comments closed
+  'kevinhwang91/nvim-ufo',
+  dependencies = 'kevinhwang91/promise-async',
+  event = 'VimEnter', -- needed for folds to load in time and comments closed
   keys = {
 			-- stylua: ignore start
 			{ "zm", function() require("ufo").closeAllFolds() end, desc = " 󱃄 Close All Folds" },
@@ -55,15 +55,15 @@ return {
       -- INFO some filetypes only allow indent, some only LSP, some only
       -- treesitter. However, ufo only accepts two kinds as priority,
       -- therefore making this function necessary :/
-      local lspWithOutFolding = { "markdown", "sh", "css", "html", "python" }
+      local lspWithOutFolding = { 'markdown', 'sh', 'css', 'html', 'python' }
       if vim.tbl_contains(lspWithOutFolding, ft) then
-        return { "treesitter", "indent" }
+        return { 'treesitter', 'indent' }
       end
-      return { "lsp", "indent" }
+      return { 'lsp', 'indent' }
     end,
     -- when opening the buffer, close these fold kinds
     -- use `:UfoInspect` to get available fold kinds from the LSP
-    close_fold_kinds_for_ft = { typescript = { "imports", "comment" } },
+    close_fold_kinds_for_ft = { typescript = { 'imports', 'comment' } },
     open_fold_hl_timeout = 800,
     fold_virt_text_handler = foldTextFormatter,
   },
