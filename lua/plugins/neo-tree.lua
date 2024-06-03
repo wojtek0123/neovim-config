@@ -14,7 +14,7 @@ return {
     })
   end,
   keys = {
-    { '<leader>E', ':Neotree reveal<CR>', { desc = 'NeoTree reveal' } },
+    { '<leader>e', ':Neotree toggle<CR>', { desc = 'NeoTree toggle' } },
   },
   opts = {
     event_handlers = {
@@ -32,10 +32,12 @@ return {
       },
     },
     filesystem = {
+      bind_to_cwd = false,
       follow_current_file = { enabled = true },
       use_libuv_file_watcher = true,
       window = {
         mappings = {
+          ['<space>'] = 'none',
           ['<leader>E'] = 'close_window',
           ['J'] = function(state)
             local tree = state.tree

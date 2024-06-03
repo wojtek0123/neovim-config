@@ -85,6 +85,17 @@ return { -- LSP Configuration & Plugins
         --  Most Language Servers support renaming across files, etc.
         map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
 
+        map('<leader>rs', '<cmd>LspRestart<CR>', '[R]estart L[s]p')
+
+        map('<leader>d', vim.diagnostic.open_float, 'Show diagnostics for line') -- show diagnostics for line
+
+        map('<leader>D', '<cmd>Telescope diagnostics bufnr=0<CR>', 'Show buffer diagnostics') -- show  diagnostics for file
+
+        map('[d', vim.diagnostic.goto_prev, 'Go to previous [D]iagnostic message')
+        map(']d', vim.diagnostic.goto_next, 'Go to next [D]iagnostic message')
+        -- map('<leader>e', vim.diagnostic.open_float, 'Show diagnostic [E]rror messages')
+        map('<leader>q', vim.diagnostic.setloclist, 'Open diagnostic [Q]uickfix list')
+
         -- Execute a code action, usually your cursor needs to be on top of an error
         -- or a suggestion from your LSP for this to activate.
         map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
@@ -175,16 +186,32 @@ return { -- LSP Configuration & Plugins
         filetypes = { 'typescript', 'html', 'typescriptreact', 'typescript.tsx' },
         root_dir = require('lspconfig.util').root_pattern('angular.json', 'tsconfig.json'),
       },
-      html = {},
-      cssls = {},
-      nxls = {},
-      tailwindcss = {},
-      prismals = {},
-      svelte = {},
+      tsserver = {
+        capabilities = capabilities,
+      },
+      html = {
+        capabilities = capabilities,
+      },
+      cssls = {
+        capabilities = capabilities,
+      },
+      nxls = {
+        capabilities = capabilities,
+      },
+      tailwindcss = {
+        capabilities = capabilities,
+      },
+      prismals = {
+        capabilities = capabilities,
+      },
+      svelte = {
+        capabilities = capabilities,
+      },
       lua_ls = {
         -- cmd = {...},
         -- filetypes = { ...},
         -- capabilities = {},
+        capabilities = capabilities,
         settings = {
           Lua = {
             completion = {
@@ -220,7 +247,7 @@ return { -- LSP Configuration & Plugins
       'tailwindcss',
       'lua_ls',
       'prismals',
-      -- 'tsserver',
+      'tsserver',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
