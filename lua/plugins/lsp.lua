@@ -6,6 +6,7 @@ return {
       document_highlight = {
         enabled = false,
       },
+      inlay_hints = { enabled = false },
       ---@type lspconfig.options
       servers = {
         tsserver = {},

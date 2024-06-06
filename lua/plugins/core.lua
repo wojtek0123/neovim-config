@@ -18,7 +18,7 @@ return {
   -- },
 
   -- disable trouble
-  { "folke/trouble.nvim", enabled = false },
+  { "folke/trouble.nvim", config = function() require("trouble").setup {} end},
   -- add symbols-outline
   {
     "simrat39/symbols-outline.nvim",
