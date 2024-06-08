@@ -69,7 +69,16 @@ vim.opt.inccommand = 'split'
 
 -- Show which line your cursor is on
 vim.opt.cursorline = true
-vim.opt.wrap = false
+
+-- " Don't wrap lines
+vim.opt.wrap = true
+-- " Wrap lines at convenient points
+vim.opt.linebreak = true
+-- " Show line breaks
+vim.opt.showbreak = '↳'
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 99999
+
+-- NOTE: You should make sure your terminal supports this
+vim.o.termguicolors = true
