@@ -87,7 +87,7 @@ return { -- LSP Configuration & Plugins
 
         map('<leader>rs', '<cmd>LspRestart<CR>', '[R]estart L[s]p')
 
-        map('<leader>d', vim.diagnostic.open_float, 'Show diagnostics for line') -- show diagnostics for line
+        map('<leader>cd', vim.diagnostic.open_float, '[C]ode [D]iagnostics for line') -- show diagnostics for line
 
         map('<leader>D', '<cmd>Telescope diagnostics bufnr=0<CR>', 'Show buffer diagnostics') -- show  diagnostics for file
 
