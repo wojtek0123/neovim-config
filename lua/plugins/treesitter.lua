@@ -20,12 +20,13 @@ return { -- Highlight, edit, and navigate code
       'yaml',
       'prisma',
       'svelte',
+      'angular',
     },
     -- Autoinstall languages that are not installed
     auto_install = true,
     highlight = {
       enable = true,
-      use_languagetree = true,
+      -- use_languagetree = true,
       -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
       --  If you are experiencing weird indenting issues, add the language to
       --  the list of additional_vim_regex_highlighting and disabled languages for indent.
