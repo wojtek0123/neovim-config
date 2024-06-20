@@ -50,6 +50,7 @@ return { -- Autoformat
       graphql = { 'prettier' },
       handlebars = { 'prettier' },
       analog = { 'prettier' },
+      prisma = { 'prettier' },
     },
   },
 }

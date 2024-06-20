@@ -29,3 +29,21 @@ vim.keymap.set('n', '<Esc>', ':noh<CR>', { silent = true })
 
 -- Fixes pasting after visual selection.
 vim.keymap.set('v', 'p', '"_dP')
+
+-- Resize window using <shift> arrow keys
+vim.keymap.set('n', '<S-Up>', '<cmd>resize +2<CR>', { silent = true, desc = 'Increase horizontal size by 2' })
+vim.keymap.set('n', '<S-Down>', '<cmd>resize -2<CR>', { silent = true, desc = 'Decrease horizontal  size by 2' })
+vim.keymap.set('n', '<S-Left>', '<cmd>vertical resize -2<CR>', { silent = true, desc = 'Increase veritacal size by 2' })
+vim.keymap.set('n', '<S-Right>', '<cmd>vertical resize +2<CR>', { silent = true, desc = 'Decrease vertical size by 2' })
+
+vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
+vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
+
+vim.keymap.set('x', '<leader>p', [["_dP]])
+
+vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]])
+vim.keymap.set('n', '<leader>Y', [["+Y]])
+
+vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]])
+
+vim.keymap.set('i', '<C-c>', '<Esc>')
