@@ -36,14 +36,15 @@ vim.keymap.set('n', '<S-Down>', '<cmd>resize -2<CR>', { silent = true, desc = 'D
 vim.keymap.set('n', '<S-Left>', '<cmd>vertical resize -2<CR>', { silent = true, desc = 'Increase veritacal size by 2' })
 vim.keymap.set('n', '<S-Right>', '<cmd>vertical resize +2<CR>', { silent = true, desc = 'Decrease vertical size by 2' })
 
-vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
-vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
-
+-- Don't copy the replaced text after pasting in visual mode
 vim.keymap.set('x', '<leader>p', [["_dP]])
 
+-- Copy to system clipboard
 vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]])
 vim.keymap.set('n', '<leader>Y', [["+Y]])
 
+-- Cut to system clipboard
 vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]])
 
+-- Paste from system clipboard
 vim.keymap.set('i', '<C-c>', '<Esc>')
