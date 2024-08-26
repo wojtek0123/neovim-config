@@ -9,8 +9,18 @@ return {
     { '<leader>bl', '<cmd>BufferLineCloseLeft<cr>', desc = 'Delete [B]uffers to the [L]eft' },
     { '<S-h>', '<cmd>BufferLineCyclePrev<cr>', desc = 'Prev Buffer' },
     { '<S-l>', '<cmd>BufferLineCycleNext<cr>', desc = 'Next Buffer' },
-    { '<leader>bD', '<cmd>:bd<cr>', desc = 'Delete [B]uffer and Window' },
-    { '<leader>bd', '<cmd>:bp<BAR>bd#<cr>', desc = 'Delete [B]uffer' },
+
+    { '<leader>X', '<cmd>:bd<cr>', desc = 'Close [B]uffer and Window' },
+    { '<leader>x', '<cmd>:bp<BAR>bd#<cr>', desc = 'Close [B]uffer' },
+    { '<leader>1', "<cmd>lua require('bufferline').go_to_buffer(1)<CR>", desc = 'Go to Buffer' },
+    { '<leader>2', "<cmd>lua require('bufferline').go_to_buffer(2)<CR>", desc = 'Go to Buffer' },
+    { '<leader>3', "<cmd>lua require('bufferline').go_to_buffer(3)<CR>", desc = 'Go to Buffer' },
+    { '<leader>4', "<cmd>lua require('bufferline').go_to_buffer(4)<CR>", desc = 'Go to Buffer' },
+    { '<leader>5', "<cmd>lua require('bufferline').go_to_buffer(5)<CR>", desc = 'Go to Buffer' },
+    { '<leader>6', "<cmd>lua require('bufferline').go_to_buffer(6)<CR>", desc = 'Go to Buffer' },
+    { '<leader>7', "<cmd>lua require('bufferline').go_to_buffer(7)<CR>", desc = 'Go to Buffer' },
+    { '<leader>8', "<cmd>lua require('bufferline').go_to_buffer(8)<CR>", desc = 'Go to Buffer' },
+    { '<leader>9', "<cmd>lua require('bufferline').go_to_buffer(9)<CR>", desc = 'Go to Buffer' },
   },
   opts = {
     options = {

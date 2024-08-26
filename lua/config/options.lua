@@ -1,6 +1,9 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+vim.o.updatetime = 250 -- Decrease update time
+vim.o.timeoutlen = 300 -- time to wait for a mapped sequence to complete (in milliseconds)
+
 vim.opt.hlsearch = true
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal

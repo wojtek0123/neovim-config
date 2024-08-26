@@ -35,6 +35,7 @@ return {
       bind_to_cwd = false,
       follow_current_file = { enabled = true },
       use_libuv_file_watcher = true,
+      hijack_netrw_behavior = 'open_default',
       window = {
         mappings = {
           ['<space>'] = 'none',

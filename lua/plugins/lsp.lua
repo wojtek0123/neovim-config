@@ -186,9 +186,12 @@ return { -- LSP Configuration & Plugins
         filetypes = { 'typescript', 'html', 'typescriptreact', 'typescript.tsx' },
         root_dir = require('lspconfig.util').root_pattern('angular.json', 'tsconfig.json'),
       },
-      tsserver = {
+      vtsls = {
         capabilities = capabilities,
       },
+      -- tsserver = {
+      --   capabilities = capabilities,
+      -- },
       html = {
         capabilities = capabilities,
       },
@@ -247,7 +250,8 @@ return { -- LSP Configuration & Plugins
       'tailwindcss',
       'lua_ls',
       'prismals',
-      'tsserver',
+      'vtsls',
+      -- 'tsserver',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
