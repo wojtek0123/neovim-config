@@ -14,7 +14,7 @@ vim.keymap.set('n', 'J', 'mzJ`z')
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 
-vim.keymap.set('n', '<leader>wd', '<C-W>c', { desc = '[W]indow [D]elete', remap = true })
+-- vim.keymap.set('n', '<leader>wd', '<C-W>c', { desc = '[W]indow [D]elete', remap = true })
 vim.keymap.set('n', '<leader>wh', '<C-W>s', { desc = 'Split [W]indow [H]orizontal', remap = true })
 vim.keymap.set('n', '<leader>wv', '<C-W>v', { desc = 'Split [W]indow [V]ertical', remap = true })
 
