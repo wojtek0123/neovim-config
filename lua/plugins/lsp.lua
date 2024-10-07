@@ -198,6 +198,9 @@ return { -- LSP Configuration & Plugins
       nxls = {
         capabilities = capabilities,
       },
+      jsonls = {
+        capabilities = capabilities,
+      },
       tailwindcss = {
         capabilities = capabilities,
       },
