@@ -66,6 +66,8 @@ return { -- Fuzzy Finder (files, lsp, etc)
             ['d'] = require('telescope.actions').delete_buffer,
             -- I'm also used to quitting bufexplorer with q instead of escape
             ['q'] = require('telescope.actions').close,
+            ['v'] = require('telescope.actions').select_vertical,
+            ['h'] = require('telescope.actions').select_horizontal,
           },
         },
       },
