@@ -20,3 +20,13 @@ vim.api.nvim_create_autocmd('TermClose', {
     end
   end,
 })
+
+-- Function to organize imports
+function OrganizeImports()
+  local params = {
+    command = '_typescript.organizeImports',
+    arguments = { vim.api.nvim_buf_get_name(0) },
+    title = '',
+  }
+  vim.lsp.buf.execute_command(params)
+end
