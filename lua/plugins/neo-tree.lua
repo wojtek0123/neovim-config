@@ -10,11 +10,11 @@ return {
   init = function()
     vim.api.nvim_create_autocmd('VimEnter', {
       pattern = '*',
-      command = 'Neotree',
+      command = 'Neotree current',
     })
   end,
   keys = {
-    { '<leader>e', ':Neotree toggle<CR>', { desc = 'NeoTree toggle' } },
+    { '<leader>e', ':Neotree current toggle<CR>', { desc = 'NeoTree toggle' } },
   },
   opts = {
     event_handlers = {
@@ -35,7 +35,7 @@ return {
       bind_to_cwd = false,
       follow_current_file = { enabled = true },
       use_libuv_file_watcher = true,
-      hijack_netrw_behavior = 'open_default',
+      hijack_netrw_behavior = 'open_current',
       window = {
         mappings = {
           ['<space>'] = 'none',
