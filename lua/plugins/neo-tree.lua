@@ -14,7 +14,7 @@ return {
     })
   end,
   keys = {
-    { '<leader>e', ':Neotree current toggle<CR>', { desc = 'NeoTree toggle' } },
+    { '<leader>e', ':Neotree toggle<CR>', { desc = 'NeoTree toggle' } },
   },
   opts = {
     event_handlers = {
