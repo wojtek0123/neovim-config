@@ -4,6 +4,8 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
+vim.keymap.set('n', '<leader>ra', '<cmd>LspStart angularls<CR>', { desc = 'Start angular language server' })
+
 -- join lines
 vim.keymap.set('n', 'J', 'mzJ`z')
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
