@@ -48,8 +48,8 @@ return { -- Autocompletion
       },
       completion = { completeopt = 'menu,menuone,noinsert,preview' },
       window = {
-        completion = cmp.config.window.bordered(),
-        documentation = cmp.config.window.bordered(),
+        -- completion = cmp.config.window.bordered(),
+        -- documentation = cmp.config.window.bordered(),
       },
 
       -- For an understanding of why these mappings were
