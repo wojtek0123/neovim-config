@@ -165,6 +165,8 @@ return { -- LSP Configuration & Plugins
     --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
     --  - settings (table): Override the default settings passed when initializing the server.
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
+    local mason_registry = require 'mason-registry'
+    local vue_language_server_path = mason_registry.get_package('vue-language-server'):get_install_path() .. '/node_modules/@vue/language-server'
     local servers = {
       -- clangd = {},
       -- gopls = {},
@@ -188,12 +190,63 @@ return { -- LSP Configuration & Plugins
       },
       ts_ls = {
         capabilities = capabilities,
+        init_options = {
+          plugins = {
+            {
+              name = '@vue/typescript-plugin',
+              location = '/usr/local/lib/node_modules/@vue/typescript-plugin',
+              languages = { 'javascript', 'typescript', 'vue' },
+            },
+          },
+        },
+        filetypes = {
+          'javascript',
+          'typescript',
+          'vue',
+        },
       },
       html = {
         capabilities = capabilities,
       },
       cssls = {
         capabilities = capabilities,
+      },
+      gopls = {
+        capabilities = capabilities,
+      },
+      eslint_d = {
+        capabilities = capabilities,
+      },
+
+      volar = {
+        capabilities = capabilities,
+        init_options = {
+          vue = {
+            hybridMode = false,
+          },
+        },
+        settings = {
+          typescript = {
+            inlayHints = {
+              enumMemberValues = {
+                enabled = true,
+              },
+              functionLikeReturnTypes = {
+                enabled = true,
+              },
+              propertyDeclarationTypes = {
+                enabled = true,
+              },
+              parameterTypes = {
+                enabled = true,
+                suppressWhenArgumentMatchesName = true,
+              },
+              variableTypes = {
+                enabled = true,
+              },
+            },
+          },
+        },
       },
       nxls = {
         capabilities = capabilities,
@@ -244,7 +297,6 @@ return { -- LSP Configuration & Plugins
       'angularls',
       'prettier',
       'eslint_d',
-      'eslint-lsp',
       'cssls',
       'html',
       'tailwindcss',
