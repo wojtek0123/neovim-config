@@ -1,3 +1,5 @@
+vim.cmd 'command! W write'
+
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping

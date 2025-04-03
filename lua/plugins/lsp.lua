@@ -186,7 +186,7 @@ return { -- LSP Configuration & Plugins
       angularls = {
         capabilities = capabilities,
         cmd = { 'node', '/usr/lib/node_modules/@angular/language-server/index.js', '--stdio' },
-        filetypes = { 'typescript', 'html', 'typescriptreact', 'typescript.tsx' },
+        filetypes = { 'typescript', 'html', 'htmlangular' },
         root_dir = require('lspconfig.util').root_pattern('angular.json', 'tsconfig.json'),
       },
       ts_ls = {
